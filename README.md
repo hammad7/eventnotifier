@@ -8,3 +8,6 @@ The tool seamlessly requires only the root url as input. It crawls the base doma
 
 https://docs.google.com/presentation/d/1kYnjYr0uTe8066_PgwEXR0-tE-1ufbyw9VSOAnTbPEM/edit?usp=sharing
 
+**Results**
+
+![Results](./results.png)
