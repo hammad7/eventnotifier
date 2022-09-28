@@ -1,4 +1,4 @@
-# Web Event Notifier.
+# Web Event Notifier
 
 **Description**
 
