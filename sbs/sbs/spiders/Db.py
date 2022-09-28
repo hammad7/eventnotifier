@@ -11,12 +11,12 @@ logging.basicConfig()
 logging.getLogger().setLevel(logging.DEBUG)
 
 database = {
-    'host': '172.16.3.103',
-    'user': 'shiksha',
-    'password': 'shiKm7Iv80l',
-    'db': 'bluespider',
+    'host': '127.0.0.1',
+    'user': 'admin',
+    'password': 'admin',
+    'db': 'webEvent',
     'port': 3306,
-    'socket': '/tmp/mysql_06.sock',
+    'socket': '/tmp/mysql.sock',
     }
 
 
