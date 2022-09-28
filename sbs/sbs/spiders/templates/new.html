@@ -1,0 +1,66 @@
+{% extends "header.html" %}
+{% block body %}
+<div class="page-header2" style='margin-top:60px; margin-bottom:30px;'>
+  <h2>Notifications</h2>
+</div>
+
+
+
+<br />
+
+<ul class="nav nav-tabs">
+  <li class="  active _tab_type" >
+    <a data-toggle="tab" href="#changedContent">
+      New Web Events 
+      
+  </a>
+</li>
+<li class="{% if data.activeTab == 'URLErrors' %} active {% endif %} _tab_type">
+    <a data-toggle="tab" href="#URLErrors">
+      Web Updates
+      
+  </a>
+</li>
+
+</ul>
+
+
+
+<div id="URLErrors" class="tab-pane fade in active">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th width="5%">S.No</th>
+          <th width="85%">Content</th>
+          <th width="30%">Timestamp</th>
+          <th width="5%">Link</th>
+      </tr>
+  </thead>
+  <tbody>
+    {% for row in data.tuples %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ row['text'] | safe }}</td>
+      <td>{{ row['ts'] }}</td>
+      <td><a href="{{ row['link'] }}" target="_blank">{{ row['url'] }}</a></td>
+  </tr>
+  
+  {% endfor %}
+  
+</tbody>
+</table>
+</div>
+
+
+<style type="text/css">
+      ._high { background-color: #94ed4b; } 
+</style>
+<script type="text/javascript">
+       $(function() {
+
+      });
+
+</script>
+</body>
+</html>
+{% endblock %}
